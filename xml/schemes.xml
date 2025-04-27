@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemes>
+    <scheme>
+        <title>Pradhan Mantri Jan Dhan Yojana (PMJDY)</title>
+        <description>Financial inclusion for all households in India, offering zero-balance bank accounts.</description>
+    </scheme>
+    <scheme>
+        <title>Atal Pension Yojana (APY)</title>
+        <description>Provide a guaranteed pension based on contribution for workers in the unorganized sector.</description>
+    </scheme>
+    <scheme>
+        <title>Pradhan Mantri Mudra Yojana (PMMY)</title>
+        <description>Microfinance support to startups and small businesses without collateral.</description>
+    </scheme>
+    <scheme>
+        <title>Sukanya Samriddhi Yojana (SSY)</title>
+        <description>Special saving scheme for girl child's future education and marriage expenses.</description>
+    </scheme>
+</schemes>

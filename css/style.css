@@ -1,0 +1,176 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.navbar {
+    background-color: #28a745 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    height: 30px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    color: white !important;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa !important;
+}
+
+/* Footer */
+.footer {
+    background-color: #28a745;
+    color: white;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Card Styles for Stock Section */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+    font-size: 16px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.card-subtitle {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.card-text {
+    font-size: 14px;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Stock Cards Layout */
+#stocksSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.card-deck .card {
+    width: 280px;
+}
+
+/* Tables */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th, .table td {
+    text-align: left;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.table thead {
+    background-color: #28a745;
+    color: white;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* Loader */
+#loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #28a745;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom Cards for Government Schemes */
+#schemesContainer .card {
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#schemesContainer .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+#schemesContainer .card-body {
+    padding: 20px;
+    font-size: 14px;
+    color: #6c757d;
+}

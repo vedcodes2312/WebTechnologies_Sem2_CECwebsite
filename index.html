@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PayEase | Finance Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/loader.css">
+</head>
+<body>
+<div id="loader"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <a class="navbar-brand" href="index.html">
+    <img src="assets/images/logo.png" width="30" height="30" alt=""> PayEase
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a href="gst-calculator.html" class="nav-link">GST Calculator</a></li>
+      <li class="nav-item"><a href="currency-converter.html" class="nav-link">Currency Converter</a></li>
+      <li class="nav-item"><a href="income-tax-calculator.html" class="nav-link">Income Tax Calculator</a></li>
+      <li class="nav-item"><a href="schemes.html" class="nav-link">Govt Schemes</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="jumbotron jumbotron-fluid text-center bg-light mb-5">
+  <div class="container">
+    <h1 class="display-4 text-success">Welcome to PayEase</h1>
+    <p class="lead text-muted">Your one-stop solution for financial tools and updates!</p>
+  </div>
+</header>
+<!--TOOLS-->
+<section class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-6 mb-4 d-flex align-items-stretch">
+      <div class="card shadow w-100" style="display: flex; flex-direction: column;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrKLSj6MQoN3P7b5Re4IFUoHAa9V79_hMlvg&s" class="card-img-top" alt="GST Calculator" style="height: 200px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">GST Calculator</h5>
+          <p class="card-text">Calculate GST easily with SGST and CGST breakup.</p>
+          <a href="gst-calculator.html" class="btn btn-success mt-auto">Use GST Calculator</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-6 mb-4 d-flex align-items-stretch">
+      <div class="card shadow w-100" style="display: flex; flex-direction: column;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcsYEZMWHSf7f5Yo4TPHQT3PMu7RkvB-zSdg&s" class="card-img-top" alt="Currency Converter" style="height: 200px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Currency Converter</h5>
+          <p class="card-text">Convert INR to USD, GBP, EUR and more currencies.</p>
+          <a href="currency-converter.html" class="btn btn-success mt-auto">Use Currency Converter</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-6 mb-4 d-flex align-items-stretch">
+      <div class="card shadow w-100" style="display: flex; flex-direction: column;">
+        <img src="https://www.financialexpress.com/wp-content/uploads/2019/11/INCOME_TAX_660.jpg?w=440" class="card-img-top" alt="Income Tax" style="height: 200px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Income Tax Calculator</h5>
+          <p class="card-text">Estimate your tax as per latest Indian tax slabs.</p>
+          <a href="income-tax-calculator.html" class="btn btn-success mt-auto">Calculate Tax</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-6 mb-4 d-flex align-items-stretch">
+      <div class="card shadow w-100" style="display: flex; flex-direction: column;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Government_of_India_logo.svg/1200px-Government_of_India_logo.svg.png" class="card-img-top" alt="Govt Schemes" style="height: 200px; object-fit: cover;">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Government Schemes</h5>
+          <p class="card-text">Latest financial schemes launched by Indian Government.</p>
+          <a href="schemes.html" class="btn btn-success mt-auto">View Schemes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stocks Section -->
+  <div class="container my-5">
+    <h2 class="text-success text-center mb-4">Top Stocks</h2>
+    <div class="row" id="stocksSection">
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer bg-success text-center text-white py-3 mt-5">
+    &copy; 2025 PayEase. Proudly Made in India.
+</footer>
+
+<!-- Bootstrap & jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/loader.js"></script>
+<script src="js/stocks.js"></script>
+
+</body>
+</html>
