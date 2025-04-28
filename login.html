@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Login Page - PayEase</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .login-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 0.7rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 0.7rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        /* Loader style (optional) */
+        #loader {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.8) url('assets/images/loader.gif') no-repeat center center;
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Loader (optional) -->
+    <div id="loader"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo.png" width="30" height="30" alt=""> PayEase
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="signup.html" class="nav-link">Sign Up</a></li>
+                <li class="nav-item"><a href="gst-calculator.html" class="nav-link">GST Calculator</a></li>
+                <li class="nav-item"><a href="currency-converter.html" class="nav-link">Currency Converter</a></li>
+                <li class="nav-item"><a href="income-tax-calculator.html" class="nav-link">Income Tax Calculator</a></li>
+                <li class="nav-item"><a href="schemes.html" class="nav-link">Govt Schemes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="login-container">
+            <h2>Login</h2>
+            <div id="error" class="error-message"></div>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-success text-center text-white py-3">
+        &copy; 2025 PayEase. Proudly Made in India.
+    </footer>
+
+    <!-- JavaScript -->
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Optional custom scripts -->
+    <script src="js/loader.js"></script>
+    <script src="js/stocks.js"></script>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const errorDiv = document.getElementById('error');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (username === '' || password === '') {
+                errorDiv.textContent = 'Both fields are required!';
+                return;
+            }
+
+            if (username.length < 4) {
+                errorDiv.textContent = 'Username must be at least 4 characters.';
+                return;
+            }
+
+            if (password.length < 6) {
+                errorDiv.textContent = 'Password must be at least 6 characters.';
+                return;
+            }
+
+            // If everything is valid
+            errorDiv.textContent = '';
+            alert('Login successful!');
+            window.location.href = "index.html"; // Redirects after login
+        });
+    </script>
+
+</body>
+</html>
